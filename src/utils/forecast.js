@@ -9,7 +9,7 @@ request({url:url, json: true},(error, response)=>{
     {
         callback('Unable to find location',undefined)
     }else{
-        callback('undefined',response.body.current.weather_descriptions[0]+'. It is currently '+response.body.current.temperature+' degress out. It feels like '+response.body.current.feelslike+' degress out.')
+        callback(response.body.current.weather_descriptions[0]+'. It is currently '+response.body.current.temperature+' degress out. It feels like '+response.body.current.feelslike+' degress out.',undefined)
     }
 })
 }
